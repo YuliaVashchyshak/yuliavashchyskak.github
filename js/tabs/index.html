@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/tabs/style.css">
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"
+        integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="tabs__container">
+        <div class="tabs-inner">
+            <div class="tabs__wrapper">
+                <button class="tabs__item">Tab 1 <i class="icon">×</i></button>
+                <button class="tabs__item">Tab 2 <i class="icon">×</i></button>
+                <button class="tabs__item">Tab 3 <i class="icon">×</i></button>
+                <span class="tabs__line"></span>
+            </div>
+            <div class="tabs__add">Add New</div>
+        </div>
+
+        <div class="tabs-content-wrapper">
+            <div class="content active"> tab 1 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores
+                commodi
+                nam optio repudiandae maiores sapiente totam ratione! Esse amet, possimus nam distinctio, animi,
+                praesentium
+                voluptatibus ratione delectus blanditiis quasi debitis?</div>
+            <div class="content"> tab 2 Ipsum dolor sit amet, consectetur adipisicing elit. Asperiores commodi nam optio
+                repudiandae maiores sapiente totam ratione!</div>
+            <div class="content"> tab 3 Dolor sit amet, consectetur adipisicing elit. Asperiores commodi nam optio
+                repudiandae maiores sapiente totam ratione! Esse amet, possimus nam distinctio, animi, praesentium
+                voluptatibus ratione delectus blanditiis quasi debitis?</div>
+
+        </div>
+    </div>
+
+    <div class="modal">
+        <div class="modal__box">
+            <span class="modal__close">×</span>
+            <h1 class="modal__title">Tabs content</h1>
+            <input class="tabs__name" type="text" placeholder="Title">
+            <textarea class="tabs__text" placeholder="Text"></textarea>
+            <button class="save__tabs">Save</button>
+        </div>
+    </div>
+    <script src="/tabs/script.js"></script>
+</body>
+
+</html>
+
+
+
+<!-- https://ant.design/components/tabs -->

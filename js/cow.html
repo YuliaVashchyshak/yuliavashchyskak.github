@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <div class="container">
+            <div class="image-container">
+                <img class="img" src="https://res.cloudinary.com/teepublic/image/private/s--O5W7xNbb--/c_crop,x_10,y_10/c_fit,w_1247/c_crop,g_north_west,h_1260,w_1260,x_-6,y_-28/co_rgb:ffffff,e_colorize,u_Misc:One%20Pixel%20Gray/c_scale,g_north_west,h_1260,w_1260/fl_layer_apply,g_north_west,x_-6,y_-28/bo_0px_solid_white/t_Resized%20Artwork/c_fit,g_north_west,h_1054,w_1054/co_ffffff,e_outline:53/co_ffffff,e_outline:inner_fill:53/co_bbbbbb,e_outline:3:1000/c_mpad,g_center,h_1260,w_1260/b_rgb:eeeeee/t_watermark_lock/c_limit,f_auto,h_630,q_90,w_630/v1541081200/production/designs/3424206_0.jpg" alt="animals">
+                <button id="btn-hapiness">Позбутися осінньої депресії</button>
+                <br>
+                <br>
+                <button id="btn-sadness" disabled>Поринути в осінню депресію</button>
+            </div>
+        </div>
+        <style>
+        .container {
+            margin: 0 auto;
+        }
+
+        .image-container {
+            width: 400px;
+            text-align: center;
+        }
+
+        .img {
+            display: none;
+            width: 70%;
+            margin-bottom: 10px;
+            transition: all .5s;
+            height: 280px;
+        }
+
+        .img.hiden {
+            height: 0;
+        }
+        </style>
+        <script>
+        const btnOpen = document.getElementById('btn-hapiness');
+const btnClose = document.getElementById('btn-sadness');
+const image = document.querySelector('.img');
+
+btnOpen.addEventListener('click', function () {
+    image.style.display = 'inline';
+    btnOpen.disabled = true;
+    btnClose.disabled = false;
+})
+
+btnClose.addEventListener('click', function () {
+    image.style.display = 'none';
+    btnOpen.disabled = false;
+    btnClose.disabled = true;
+})
+        </script>
+    </body>

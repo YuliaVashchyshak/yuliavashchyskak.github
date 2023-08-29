@@ -1,0 +1,207 @@
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+}
+
+.tabs {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.tabs-title__wrap {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.tab-title {
+    margin-right: 5px;
+    font-size: 16px;
+    padding: 8px 16px;
+    border: 1px solid #ebebeb;
+    border-radius: 8px 8px 0 0;
+    border-bottom: none;
+    cursor: pointer;
+    transition: all .5s;
+    background: #f3f3f37a;
+}
+
+.tab-title:hover {
+    color: #4096ff;
+}
+
+.tab-title:before {
+    content: '';
+    position: absolute;
+    display: block;
+    bottom: -1px;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 5px;
+    background: white;
+    z-index: 5;
+    transition: all .5s;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.active-tab {
+    background: transparent;
+    color: #4096ff;
+    position: relative;
+}
+
+.active-tab::before {
+    opacity: 1;
+}
+
+.tab-content {
+    border: 1px solid #ebebeb;
+    border-radius: 0 8px 8px 8px;
+    padding: 10px 20px;
+
+}
+
+.hiden-tab-content {
+    display: none;
+}
+
+
+.buttons {
+    margin-top: 20px;
+display: flex;
+justify-content: space-between;
+}
+
+.hover-button {
+    outline: none;
+    background: transparent;
+    border: 1px solid #ebebeb;
+    font-size: 14px;
+    text-align: center;
+    padding: 8px 16px;
+    cursor: pointer;
+    transition: all .5s;
+}
+
+.hover-button:hover {
+    border-color: #ffa4a4;
+    color: #ffa4a4;
+}
+
+.hover-button-wrapper {
+    position: relative;
+    
+}
+
+.popover-hover {
+    position: absolute;
+    top: 30px;
+    border: 1px solid #ffa4a4;
+    width: 200px;
+    height: 100px;
+    margin-top: 15px;
+    opacity: 0;
+    transition: all .5s;
+    pointer-events: none;
+}
+
+.popover-hover::after {
+    content: '';
+    position: absolute;
+    top: -15px;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 14px;
+    background: transparent;
+}
+
+.popover-hover.active {
+    pointer-events: all;
+    opacity: 1;
+}
+
+
+.popover span {
+    position: absolute;
+    display: block;
+    width: 10px;
+    height: 10px;
+    top: -3px;
+    left: 50%;
+    border: 1px solid #ffa4a4;
+    border-bottom: none;
+    border-right: none;
+    transform: rotate(45deg) translateX(-50%);
+    background: #fff;
+    z-index: 5;
+}
+
+
+.spin-button {
+    position: relative;
+    border: 1px solid #ebebeb;
+    color: #4e4e4e;
+    background: transparent;
+    font-size: 14px;
+    font-weight: 600;
+    margin: 0 auto;
+    margin-top: 42px;
+    padding: 8px 16px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.spin-button:hover {
+    border-color: #ffa4a4;
+    background: #ffb1b12e;
+}
+
+.spin-button.disabled {
+    border-color: #c16060;
+    background: #d557572e;
+    pointer-events: none;
+}
+
+.spiner {
+    animation: getRotates 1s linear infinite;
+   
+}
+
+
+.spiner-wrap {
+    opacity: 0;
+    transition: .9s;
+    width: 0px;
+    height: 20px;
+  padding-right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.spiner-wrap.active {
+    opacity: 1;
+    width: 20px;
+    padding-right: 4px;
+}
+
+@keyframes getRotates {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+.image__dog {
+display: block;
+max-width: 200px;
+}

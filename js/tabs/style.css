@@ -1,0 +1,205 @@
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+}
+
+.tabs__container {
+    margin: 0 auto;
+}
+
+.tabs__add {
+    width: 70px;
+    font-size: 16px;
+    border: 2px solid rgb(211, 211, 211);
+    border-radius: 6px;
+    box-shadow: 0 2px 0 rgba(0, 0, 0, .02);
+    padding: 2px 10px 4px 10px;
+    text-align: center;
+    margin-bottom: 10px;
+    cursor: pointer;
+    margin-left: 20px;
+}
+
+.tabs__add:hover {
+    color: #4096ff;
+    border-color: #4096ff;
+}
+
+.tabs__item {
+    border: none;
+    font: inherit;
+    color: inherit;
+    background-color: transparent;
+    cursor: pointer;
+    transition: all .3s;
+    padding: 0 12px 12px 12px;
+    font-size: 14px;
+    position: relative;
+
+}
+
+.tabs__item:hover {
+    color: #4096ff;
+}
+
+.icon {
+    font-size: 20px;
+    color: rgb(163, 163, 163);
+}
+
+.icon:hover {
+    color: black;
+}
+
+.tabs-inner {
+    display: flex;
+}
+
+.tabs__wrapper {
+    border-bottom: 1px solid rgb(211, 211, 211);
+    position: relative;
+}
+
+.tabs__line {
+    height: 1px;
+    width: 50px;
+    background: blue;
+    position: absolute;
+    bottom: -1px;
+    left: 8px;
+    transition: all .5s;
+}
+
+.content {
+    display: none;
+    max-width: 300px;
+}
+
+.content.active {
+    display: block;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 5;
+    background-color: rgba(0, 0, 0, .3);
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: all .5s;
+    pointer-events: none;
+}
+
+.modal.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.modal__box {
+    position: relative;
+    width: 600px;
+    padding: 20px 30px;
+    border: 1px solid rgb(211, 211, 211);
+    border-radius: 10px;
+    z-index: 1;
+    background-color: #fff;
+    transition: all .5s;
+    transform: translateY(-90vh);
+}
+
+.modal__close {
+    position: absolute;
+    top: -5px;
+    right: 10px;
+    font-size: 35px;
+    color: gray;
+    transition: all .3s;
+}
+
+.modal__close:hover {
+    color: black;
+}
+
+.modal.active .modal__box {
+    transform: translateY(0);
+}
+
+.modal__title {
+    font-weight: 500;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 20px;
+    color: rgb(61, 61, 61);
+}
+
+.tabs__name,
+.tabs__text {
+    display: block;
+    outline: none;
+    margin: 0;
+    color: rgba(0, 0, 0, 0.88);
+    font-size: 14px;
+    list-style: none;
+    border-radius: 6px;
+    transition: all 0.2s;
+    border: 1px solid #d9d9d9;
+    width: 400px;
+    transition: all .2s;
+}
+
+.tabs__name:hover,
+.tabs__text:hover {
+    border-color: #4096ff;
+}
+
+.tabs__name.error {
+    border-color: red;
+}
+
+.tabs__name {
+    padding: 10px;
+    margin-bottom: 25px;
+}
+
+.tabs__name.error {
+    border-color: red;
+
+}
+
+.tabs__text {
+    padding: 10px 10px 0px 10px;
+
+}
+
+.tabs__text.error {
+    border: 1px solid red;
+    border-radius: 5px;
+}
+
+.save__tabs {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    border: none;
+    font: inherit;
+    color: inherit;
+    background-color: transparent;
+    cursor: pointer;
+    background: #4096ff;
+    border-radius: 5px;
+    width: 80px;
+    text-transform: uppercase;
+    color: white;
+    font-weight: 500;
+    padding: 5px 10px;
+    transition: .5s;
+}
+
+.save__tabs:hover {
+    background: rgba(15, 148, 171, 0.67);
+
+}

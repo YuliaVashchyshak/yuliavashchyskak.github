@@ -1,0 +1,56 @@
+.container {
+    width: 1500px;
+    height: 800px;
+    border: 5px solid #000;
+    background-color: rgb(148, 219, 154);
+    display: flex;
+}
+
+.box {
+    width: 150px;
+    height: 150px;
+    border: 1px solid #000;
+    border-radius: 30px;
+    margin: 30px;
+}
+
+.flower {
+    width: 100px;
+    position: absolute;
+    z-index: 1000;
+}
+
+.yellow {
+    background-color: #f3f057;
+    margin-top: 300px;
+}
+
+.green {
+    background-color: #5ff791;
+    margin-top: 600px;
+}
+
+.blue {
+    background-color: #799dff;
+    margin-top: 600px;
+}
+
+.body {
+    background-color: #ffbc56;
+    margin-top: 50px;
+}
+
+.purple {
+    background-color: #fa74fa;
+    margin-top: 440px;
+}
+
+.orange {
+    background-color: #fc8727;
+    margin-top: 100px;
+}
+
+.red {
+    background-color: #f84545;
+    margin-top: 300px;
+}
