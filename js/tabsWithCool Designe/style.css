@@ -1,0 +1,70 @@
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+}
+
+.tabs {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.tabs-title__wrap {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.tab-title {
+    margin-right: 5px;
+    font-size: 16px;
+    padding: 8px 16px;
+    border: 1px solid #ebebeb;
+    border-radius: 8px 8px 0 0;
+    border-bottom: none;
+    cursor: pointer;
+    transition: all .5s;
+    background: #f3f3f37a;
+}
+
+.tab-title:hover {
+    color: #4096ff;
+}
+
+.tab-title:before {
+    content: '';
+    position: absolute;
+    display: block;
+    bottom: -1px;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 5px;
+    background: white;
+    z-index: 5;
+    transition: all .5s;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.active-tab {
+    background: transparent;
+    color: #4096ff;
+    position: relative;
+}
+
+.active-tab::before {
+    opacity: 1;
+}
+
+.tab-content {
+    border: 1px solid #ebebeb;
+    border-radius: 0 8px 8px 8px;
+    padding: 10px 20px;
+
+}
+
+.hiden-tab-content {
+    display: none;
+}
+
+
