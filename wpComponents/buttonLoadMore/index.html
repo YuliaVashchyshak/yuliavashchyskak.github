@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<div class="btn-loadmore blog__load-more main-btn" title="Load more" data-param-posts='<?php echo serialize($query->query_vars); ?>' data-max-pages='<?php echo $query->max_num_pages; ?>' data-tpl='doveryayut'>
+		<span class="fas fa-redo"></span> Load more
+	</div>
+	<script>
+		var this_page = 1;
+	  </script>
+</body>
+</html>
+
+
+
+<script>
+// start load more js
+jQuery(function ($) {
+	const loadMoreBtn = document.querySelector(".btn-loadmore");
+
+
+	loadMoreBtn.addEventListener("click", () => {
+		loadMoreBtn.innerHTML = "Load..";
+	const search = document.querySelector(".filter__input").value;
+
+		
+		let data = {
+			action: "loadmore",
+			query: loadMoreBtn.getAttribute("data-param-posts"),
+			page: this_page,
+			tpl: loadMoreBtn.getAttribute("data-tpl"),
+		};
+		if (search) {
+			data.search = search;
+		}
+		
+		$.ajax({
+			url: "/wp-admin/admin-ajax.php",
+			data: data,
+			type: "POST",
+			success: function (data) {
+				if (data) {
+					loadMoreBtn.innerHTML = "Load more";
+					document.querySelector(".posts__wrapper").innerHTML += data;
+					this_page++;
+					if (this_page == loadMoreBtn.getAttribute("data-max-pages")) {
+						loadMoreBtn.remove();
+					}
+				} else {
+					loadMoreBtn.remove();
+				}
+			},
+		});
+	});
+});
+// end load more js
+</script>
+
+

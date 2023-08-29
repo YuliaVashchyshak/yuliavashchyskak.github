@@ -1,0 +1,178 @@
+/*
+Theme Name: Timber
+*/
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.container {
+    max-width: 1030px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 0 auto;
+}
+
+.header {
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    padding-top: 110px;
+}
+
+.header__inner {
+    display: block;
+    text-align: center;
+    width: 530px;
+    height: 530px;
+    border-radius: 50%;
+    border: 10px solid #f4d4a5;
+    background: #FFF;
+    padding-top: 15px;
+    padding-bottom: 160px;
+    margin-left: 140px;
+}
+
+.header__name {
+    font-family: 'Lato', sans-serif;
+    font-size: 35px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #bf4200;
+    padding-top: 16px;
+}
+
+.phone {
+    text-decoration: none;
+    display: block;
+    font-size: 35px;
+    color: #000000;
+    margin-top: 25px;
+    padding-bottom: 45px;
+}
+
+.header__title {
+    font-size: 50px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #1fad26;
+    padding: 0 5px;
+}
+
+.header__sale {
+    margin-top: 40px;
+}
+
+.main {
+    text-align: center;
+}
+
+.main__title {
+    font-size: 41px;
+    font-weight: 700;
+    color: #d07a2d;
+    margin-top: 70px;
+    margin-bottom: 60px;
+}
+
+.main__text {
+    font-size: 29px;
+}
+
+.main-img {
+    padding: 90px 0;
+}
+
+.project__title {
+    font-size: 41px;
+    font-weight: 700;
+    color: #d0662d;
+}
+
+.project__name {
+    margin-top: 115px;
+    font-size: 32px;
+    font-weight: 700;
+    color: #000000;
+}
+
+.project__size,
+.project__area {
+    font-size: 25px;
+    font-weight: 400;
+}
+
+.project__price {
+    font-size: 25px;
+    font-weight: 400;
+    color: #17753b;
+    margin-bottom: 30px;
+}
+
+
+
+.download {
+    background: #f1dfbc;
+    margin-top: 170px;
+    margin-bottom: 120px;
+    padding: 30px 0;
+}
+
+.download a {
+    display: block;
+    border: 5px solid #effd15;
+    font-size: 32px;
+    font-weight: 700;
+    text-decoration: underline;
+    color: #ffffff;
+    background: #17753b;
+    padding: 30px 45px;
+    max-width: 610px;
+    margin: 0 auto;
+}
+
+.gallery__title {
+    font-size: 41px;
+    font-weight: 700;
+    color: #d07a2d;
+    margin-bottom: 50px;
+}
+
+.gallery__text {
+    font-size: 25px;
+    font-weight: 400;
+    color: #1e1e1e;
+    margin-bottom: 70px;
+}
+
+.gallery__inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.phone__second {
+    font-size: 50px;
+    line-height: 1.2;
+    font-weight: 700;
+    color: #000000;
+}
+
+.footer__email {
+    font-size: 30px;
+    text-decoration: underline;
+    color: #2f8bc5;
+    margin-bottom: 150px;
+}
+
+.footer {
+    text-align: center;
+}
