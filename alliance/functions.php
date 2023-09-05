@@ -53,32 +53,9 @@ add_theme_support('custom-logo');
 add_action('after_setup_theme', 'theme_register_thumbnails');
 function theme_register_thumbnails()
 {
-    add_theme_support('post-thumbnails', array('post', 'reviews'));
+    add_theme_support('post-thumbnails', array('post', 'team'));
 }
 //== end add image for posts ==//
-
-//== start add custom post type ==//
-add_action('init', 'reviews_posttype');
-function reviews_posttype()
-{
-    register_post_type(
-        'reviews',
-        array(
-            'labels' => array(
-                'name' => __('Reviews', 'textdomain'),
-                'singular_name' => __('Reviews', 'textdomain'),
-                'add_new_item'  => __('New Review', 'textdomain'),
-                'view_item'     => __('View Review', 'textdomain')
-            ),
-            'public'        => true,
-            'has_archive'  => true,
-            'hierarchical' => true,
-            'supports' => array('title', 'author', 'page-attributes', 'thumbnail', 'editor'),
-            'rewrite'  => array('slug' => 'reviews'),
-        )
-    );
-}
-//== end add custom post type ==//
 
 function get_filter_blog()
 {
@@ -134,3 +111,43 @@ function get_filter_blog()
 }
 add_action('wp_ajax_get_filter_blog', 'get_filter_blog');
 add_action('wp_ajax_nopriv_get_filter_blog', 'get_filter_blog');
+
+//== start add custom post type ==//
+add_action('init', 'team_posttype');
+function team_posttype()
+{
+    register_post_type(
+        'team',
+        array(
+            'labels' => array(
+                'name' => __('Team', 'textdomain'),
+                'singular_name' => __('Team', 'textdomain'),
+            ),
+            'public'        => true,
+            'has_archive'  => true,
+            'menu_position' => 5,
+            'hierarchical' => true,
+            'supports' => array('title', 'author', 'page-attributes', 'thumbnail', 'editor'),
+            'rewrite'  => array('slug' => 'team'),
+        )
+    );
+
+        register_taxonomy( 
+            'posytion', 
+            'team',
+         array(
+            'label'        => __( 'Posytion'),
+            'rewrite'      => array( 'slug' => 'posytion' ),
+            'hierarchical'    => true,
+        ) );
+
+        register_taxonomy( 
+            'experience', 
+            'team',
+         array(
+            'label'        => __( 'Experience'),
+            'rewrite'      => array( 'slug' => 'experience' ),
+            'hierarchical'    => true,
+        ) );
+    }
+//== end add custom post type ==//
